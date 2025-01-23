@@ -8,8 +8,10 @@ for (let i = 0 ; i < buttons.length ; i++){
         buttons[i].addEventListener('click',(event)=>{
             if (!input.value) return alert("Mongon dungee oruulna uu!")
             const stringButton =buttons[i].innerHTML;
-            const numberButton = parseFloat(stringButton.replace('%','')); 
-            const numberInput = parseFloat(input.value); 
+            const numberButton = parseFloat(stringButton); 
+            // const numberButton = stringButton.replace("%",""); 
+            // const numberInput = parseFloat(input.value); 
+            const numberInput = Number(input.value); 
             let result = (numberInput * numberButton) / 100 + numberInput;
             document.getElementById("total").innerHTML = result;           
         })
