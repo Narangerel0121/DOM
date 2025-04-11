@@ -15,6 +15,6 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 function reset() {
-    input.value = ""
+    input.value = "";
 }
 

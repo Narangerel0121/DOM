@@ -13,7 +13,10 @@
     <div id="calculator">
         <div id="container">
             <p>Bill</p>
-            <input id="billinput" type="number">
+            <div id="inputsection">
+                <img src="icon.svg" />
+                <input id="billinput" type="number">
+            </div>
             <p>Select Tip</p>
             <div id="tipbuttons">
                 <button class="tips">5%</button>
@@ -25,8 +28,10 @@
                 <button class="tips">65%</button>
                 <button class="tips">80%</button>
             </div>
-            <p>Total <span id="total"></span></p>
-
+            <div id="amount">
+                <p>Total:</p> 
+                <span id="total"></span>
+            </div>
             <button id="resetbutton" onclick="reset()">Reset</button>
         </div>
     </div>
