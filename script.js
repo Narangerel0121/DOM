@@ -2,6 +2,7 @@
 
 const input = document.getElementById("billinput");
 const buttons = document.getElementsByClassName("tips");
+const total = document.getElementById("total");
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', (event) => {
@@ -10,11 +11,13 @@ for (let i = 0; i < buttons.length; i++) {
         const numberButton = parseFloat(stringButton);
         const numberInput = Number(input.value);
         let result = (numberInput * numberButton) / 100 + numberInput;
-        document.getElementById("total").innerHTML = result;
+        total.innerHTML = result;
     })
 }
 
 function reset() {
     input.value = "";
+    total.innerHTML = "";
 }
+
 
